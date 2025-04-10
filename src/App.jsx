@@ -5,6 +5,7 @@ import TopCoins from "./components/TopCoins";
 import ChatInterface from "./components/ChatInterface";
 import MarketInfo from "./components/MarketInfo";
 import AnalysisDisplay from "./components/AnalysisDisplay";
+import Footer from "./components/Footer";
 import axios from "axios";
 
 function App() {
@@ -85,10 +86,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white flex flex-col">
       <Header />
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 flex-grow">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left column - Top coins and market info */}
           <div className="lg:col-span-1">
@@ -147,6 +148,7 @@ function App() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

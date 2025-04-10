@@ -8,6 +8,12 @@ import AnalysisDisplay from "./components/AnalysisDisplay";
 import Footer from "./components/Footer";
 import axios from "axios";
 
+const API_BASE_URL = import.meta.env.PROD
+  ? "https://memecoin-agent-api.onrender.com"
+  : "";
+
+axios.defaults.baseURL = API_BASE_URL;
+
 function App() {
   const [topCoins, setTopCoins] = useState([]);
   const [marketCondition, setMarketCondition] = useState("");

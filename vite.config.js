@@ -8,15 +8,15 @@ export default defineConfig({
   server: {
     proxy: {
       "/top-coins": {
-        target: "http://localhost:8000",
+        target: "https://memecoin-agent-api.onrender.com",
         changeOrigin: true,
       },
       "/refresh-data": {
-        target: "http://localhost:8000",
+        target: "https://memecoin-agent-api.onrender.com",
         changeOrigin: true,
       },
       "/analyze": {
-        target: "http://localhost:8000",
+        target: "https://memecoin-agent-api.onrender.com",
         changeOrigin: true,
       },
     },
